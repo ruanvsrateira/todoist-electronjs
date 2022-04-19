@@ -24,7 +24,10 @@
     <div class="inputsContainer">
         <input type="text" placeholder="Escreva sua atividade">
 
-        <button class="addButton">
+        <button 
+            class="addButton"
+            onclick="addTask(document.querySelector('input').value)"
+        >
             <div class="mais">
 
             </div>
@@ -32,5 +35,11 @@
         </button>
     </div>
 
+    <div class="tasksContainer">
+        <ul class="listTasks">
+        </ul>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
