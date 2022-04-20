@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo ist Ruan</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="titleContainer">
-        <h1>Aplicativo para criação das atividades diárias</h1>
+      <h1>Aplicativo para criação das atividades diárias</h1>
     </div>
 
-    <div class="linePurpleContainer">
-
-    </div>
+    <div class="linePurpleContainer"></div>
 
     <div class="goingToDoContainer">
-        <h1>Oquê vou fazer hoje?</h1>
+      <h1>Oquê vou fazer hoje?</h1>
     </div>
 
     <div class="inputsContainer">
-        <input type="text" placeholder="Escreva sua atividade">
+      <input type="text" placeholder="Escreva sua atividade" />
 
-        <button 
-            class="addButton"
-            onclick="addTask(document.querySelector('input').value)"
-        >
-            <div class="mais">
+      <button
+        class="addButton"
+        onclick="addTask(document.querySelector('input').value)"
+      >
+        <div class="mais"></div>
+        Adicionar
 
-            </div>
-            Adicionar
-        </button>
+        <i class="fa-solid fa-plus"></i>
+      </button>
     </div>
 
     <div class="tasksContainer">
-        <ul class="listTasks">
-        </ul>
+      <ul class="listTasks"></ul>
     </div>
-
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
