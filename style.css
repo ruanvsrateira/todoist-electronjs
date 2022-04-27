@@ -10,6 +10,10 @@ button {
     font-family: "Roboto", sans-serif;
 }
 
+li {
+    color: #835AFD;
+}
+
 .titleContainer {
     margin-top: 123px;
     margin-left: auto;
@@ -95,19 +99,20 @@ button {
 }
 
 .tasksContainer li {
-    color: #835AFD;
     list-style: none;
 }
 
-.btnDel {
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    font-family: "Poppins";
-    background-color: #E73F5D;
-    color: white;
-    font-weight: bolder;
+.iconDel {
+    color: #E73F5D;
     margin-left: 5px;
-    cursor: pointer
+}
+
+.iconCheck {
+    color: green;
+    margin-left: 5px;
+}
+
+.checked {
+    color: green;
+    text-decoration: line-through;
 }

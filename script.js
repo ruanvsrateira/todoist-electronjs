@@ -5,13 +5,26 @@ const body = document.querySelector("body");
 body.addEventListener("click", (e) => {
     const el = e.target;
 
-    if(el.classList.contains("btnDel")) {
+    if(el.classList.contains("iconDel")) {
         el.parentElement.remove();
+    }
+
+    if(el.classList.contains("iconCheck")) {
+        if(!el.parentElement.classList.contains("checked")) {
+            el.parentElement.setAttribute("class", "checked")
+            document.querySelector(".iconCheck").style.color = "#e73f5d"
+        }
+
+        else {
+            el.parentElement.removeAttribute("class")
+            
+            document.querySelector(".iconCheck").style.color = "green"
+        }
     }
 });
 
 body.addEventListener("keydown", (e) => {
-    const el = e.key;
+    const el = e.key; 
 
     if(el == "Enter") {
         const nome = document.querySelector("input").value;
@@ -27,22 +40,18 @@ const addTask = (nome) => {
 
     const li = document.createElement("li");
     const input = document.querySelector('input');
-    const button = document.createElement("button");
+    const buttonDel = document.createElement("i");
+    const buttonCheck = document.createElement("i")
 
     li.innerText = nome;
 
     ulElement.appendChild(li)
     input.value = "";
 
-    button.innerText = "-";
-    button.setAttribute("class", "btnDel")
-    button.setAttribute("onclick", "() => alert(123)")
-    li.appendChild(button);
+    buttonDel.setAttribute("class", "fa-solid fa-circle-minus iconDel");
+    buttonCheck.setAttribute("class", "fa-solid fa-circle-check iconCheck");
 
-    const btnDel = document.querySelector("li button");
-}
-
-const delTask = (li) => {
-    li.remove()
+    li.appendChild(buttonDel);
+    li.appendChild(buttonCheck);
 }
 
